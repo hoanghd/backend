@@ -50,7 +50,7 @@
 					</datasetRun>
 					<column kind="single" uuid="160f7f79-7468-4c22-85ac-8d3e94fcf5c9" width="40">
 						<columnHeader height="30" rowSpan="1" style="Table_CH">
-							<element kind="staticText" uuid="2ee5105f-ba2b-4a44-9df7-3483b7ac65ef" x="0" y="0" width="40" height="30" fontName="Hiragino Maru Gothic Pron W4">
+							<element kind="staticText" uuid="2ee5105f-ba2b-4a44-9df7-3483b7ac65ef" x="0" y="0" width="40" height="30" fontName="Hiragino Maru Gothic ProN">
 								<paragraph leftIndent="2" rightIndent="2" spacingBefore="2" spacingAfter="2"/>
 								<text><![CDATA[名前]]></text>
 								<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
@@ -60,7 +60,7 @@
 							</element>
 						</columnHeader>
 						<detailCell height="30" style="Table_TD">
-							<element kind="textField" uuid="ed5e7ec3-b755-4c6f-b2b9-b67f141311d4" x="0" y="0" width="40" height="30" fontName="Hiragino Maru Gothic Pron W4">
+							<element kind="textField" uuid="ed5e7ec3-b755-4c6f-b2b9-b67f141311d4" x="0" y="0" width="40" height="30" fontName="Hiragino Maru Gothic ProN" textAdjust="StretchHeight">
 								<paragraph leftIndent="2" rightIndent="2" spacingBefore="2" spacingAfter="2"/>
 								<expression><![CDATA[$F{name}]]></expression>
 								<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
@@ -73,7 +73,7 @@
 					</column>
 					<column kind="single" uuid="5849df67-4440-44e3-bd01-9c3b205e83be" width="40">
 						<columnHeader height="30" rowSpan="1" style="Table_CH">
-							<element kind="staticText" uuid="eff9912c-889f-412d-b0fc-656d4479e37f" x="0" y="0" width="40" height="30" fontName="Hiragino Maru Gothic Pron W4">
+							<element kind="staticText" uuid="eff9912c-889f-412d-b0fc-656d4479e37f" x="0" y="0" width="40" height="30" fontName="Hiragino Maru Gothic ProN">
 								<paragraph leftIndent="2" rightIndent="2" spacingBefore="2" spacingAfter="2"/>
 								<text><![CDATA[番号]]></text>
 								<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>

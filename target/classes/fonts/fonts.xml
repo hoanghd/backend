@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <fontFamilies>
-    <fontFamily name="Hiragino Maru Gothic Pron W4">
-        <normal>fonts/hiragino-maru-gothic-pron-w4.otf</normal>
+    <fontFamily name="Hiragino Maru Gothic ProN">
+        <normal>fonts/hiragino-maru-gothic-pron.otf</normal>
         <pdfEncoding>Identity-H</pdfEncoding>
         <pdfEmbedded>true</pdfEmbedded>
     </fontFamily>
