@@ -60,13 +60,15 @@
 							</element>
 						</columnHeader>
 						<detailCell height="30" style="Table_TD">
-							<element kind="textField" uuid="ed5e7ec3-b755-4c6f-b2b9-b67f141311d4" x="0" y="0" width="40" height="30" fontName="Hiragino Maru Gothic ProN" textAdjust="StretchHeight">
-								<paragraph leftIndent="2" rightIndent="2" spacingBefore="2" spacingAfter="2"/>
+							<element kind="textField" uuid="ed5e7ec3-b755-4c6f-b2b9-b67f141311d4" x="0" y="0" width="40" height="30" markup="none" fontName="Hiragino Maru Gothic ProN" textAdjust="StretchHeight" linkType="None" linkTarget="Self" blankWhenNull="true" vTextAlign="Middle">
+								<paragraph lineSpacing="Single" firstLineIndent="0" leftIndent="2" rightIndent="2" spacingBefore="2" spacingAfter="2"/>
 								<expression><![CDATA[$F{name}]]></expression>
 								<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
 								<property name="com.jaspersoft.studio.unit.spacingAfter" value="px"/>
 								<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 								<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+								<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+								<box bottomPadding="4"/>
 							</element>
 						</detailCell>
 						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
