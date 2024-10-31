@@ -8,7 +8,7 @@
 	<parameter name="rowsDataSet" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
 	
 	<pageHeader height="35" splitType="Stretch">
-		<element kind="textField" x="0" y="0" width="280" height="35" fontName="Hiragino Maru Gothic ProN">
+		<element kind="textField" x="0" y="0" width="280" height="35">
 			<expression><![CDATA[$P{companyName}]]></expression>
 		</element>
 	</pageHeader>
@@ -43,13 +43,13 @@
 					
 					<column kind="single" width="40">
 						<columnHeader height="60" style="TH">
-							<element kind="staticText" x="4" y="2" width="34" height="56" fontName="Hiragino Maru Gothic ProN" hTextAlign="Center" vTextAlign="Middle">
+							<element kind="staticText" x="4" y="2" width="34" height="56" hTextAlign="Center" vTextAlign="Middle">
 								<text><![CDATA[番号]]></text>
 							</element>
 						</columnHeader>
 						
 						<detailCell height="30" style="TD">
-							<element kind="textField" x="4" y="2" width="34" height="26" fontName="Hiragino Maru Gothic ProN" hTextAlign="Center" vTextAlign="Middle">
+							<element kind="textField" x="4" y="2" width="34" height="26" hTextAlign="Center" vTextAlign="Middle">
 								<expression><![CDATA[$F{num}]]></expression>
 							</element>
 						</detailCell>
@@ -57,7 +57,7 @@
 					
 					<column kind="single" width="400">
 						<columnHeader height="60" style="TH">
-							<element kind="staticText" x="4" y="2" width="394" height="26" fontName="Hiragino Maru Gothic ProN" hTextAlign="Center" vTextAlign="Middle">
+							<element kind="staticText" x="4" y="2" width="394" height="26" hTextAlign="Center" vTextAlign="Middle">
 								<text><![CDATA[名前1]]></text>
 							</element>
 							
@@ -65,7 +65,7 @@
 								<pen lineWidth="0.5"/>
 							</element>
 							
-							<element kind="staticText" x="4" y="33" width="194" height="26" fontName="Hiragino Maru Gothic ProN" hTextAlign="Center" vTextAlign="Middle">
+							<element kind="staticText" x="4" y="33" width="194" height="26" hTextAlign="Center" vTextAlign="Middle">
 								<text><![CDATA[名前2]]></text>
 							</element>
 							
@@ -73,14 +73,14 @@
 								<pen lineWidth="0.5"/>
 							</element>
 							
-							<element kind="staticText" x="204" y="33" width="194" height="26" fontName="Hiragino Maru Gothic ProN" hTextAlign="Center" vTextAlign="Middle">
+							<element kind="staticText" x="204" y="33" width="194" height="26" hTextAlign="Center" vTextAlign="Middle">
 								<text><![CDATA[名前3]]></text>
 							</element>
 							
 						</columnHeader>
 						
 						<detailCell height="30" style="TD">
-							<element kind="textField" x="4" y="2" width="394" height="26" fontName="Hiragino Maru Gothic ProN" hTextAlign="Left" vTextAlign="Middle" textAdjust="StretchHeight">
+							<element kind="textField" x="4" y="2" width="394" height="26" hTextAlign="Left" vTextAlign="Middle" textAdjust="StretchHeight">
 								<expression><![CDATA[$F{name}]]></expression>
 							</element>
 						</detailCell>
