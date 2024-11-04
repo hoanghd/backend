@@ -51,7 +51,7 @@ public class ReportApplication {
 			parameters.put("companyName","header");
 			parameters.put("rowsDataSet", new JRBeanCollectionDataSource(rows));
 			
-			JasperReport report = JasperCompileManager.compileReport("/Users/hoang-hd/Documents/symphony/src/main/resources/templates/report.jrxml");
+			JasperReport report = JasperCompileManager.compileReport("/Users/hoang-hd/Documents/symphony/src/main/resources/templates/report.xml");
 			JasperPrint print = JasperFillManager.fillReport(report, parameters, new JREmptyDataSource());
 			JasperExportManager.exportReportToPdfFile(print, "/Users/hoang-hd/Documents/symphony/src/main/resources/static/report.pdf");
 			System.out.println("Report Generated Successfully");
