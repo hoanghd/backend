@@ -6,12 +6,6 @@
 	
 	<parameter name="companyName" class="java.lang.String"/>
 	<parameter name="rowsDataSet" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
-	
-	<pageHeader height="40" splitType="Stretch">
-		<element kind="textField" x="0" y="0" width="280" height="40">
-			<expression><![CDATA[$P{companyName}]]></expression>
-		</element>
-	</pageHeader>
 					
 	<style name="TH" mode="Opaque" backcolor="#F0F8FF">
 		<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
@@ -33,86 +27,119 @@
 		</box>
 	</style>
 	
+	<pageHeader height="40" splitType="Stretch">
+		<element kind="textField" x="0" y="0" width="555" height="38" style="TD" hTextAlign="Center" vTextAlign="Middle">
+			<box topPadding="-4"/>
+			<expression><![CDATA[$P{companyName}]]></expression>
+		</element>
+	</pageHeader>
+	
+	<columnHeader height="20" splitType="Stretch">
+		<element kind="staticText" x="0" y="0" width="555" height="18" style="TD" hTextAlign="Center" vTextAlign="Middle">
+			<box topPadding="-4"/>
+			<text><![CDATA[column-header]]></text>
+		</element>
+	</columnHeader>
+	
 	<detail>
-		<band height="700" splitType="Stretch">
-			<element kind="staticText" x="0" y="0" width="440" height="40" style="TH" hTextAlign="Center" vTextAlign="Middle">
-				<box topPadding="-4"/>
-				<text><![CDATA[SUBHEADER]]></text>
+		<band height="682" splitType="Stretch">
+			<element kind="frame" x="0" y="0" width="555" height="40">
+				<element kind="staticText" x="0" y="0" width="555" height="40" style="TD" hTextAlign="Center" vTextAlign="Middle">
+					<box topPadding="-4"/>
+					<text><![CDATA[body-header]]></text>
+				</element>
 			</element>
 			
-			<element kind="component" x="0" y="50" width="351" height="640">
-				<component kind="table">
-					<datasetRun subDataset="rowsDataSet">
-						<dataSourceExpression><![CDATA[$P{rowsDataSet}]]></dataSourceExpression>
-					</datasetRun>
-					
-					<column kind="single" width="40">
-						<columnHeader height="80" style="TH">
-							<element kind="staticText" x="0" y="0" width="40" height="80" hTextAlign="Center" vTextAlign="Middle">
-								<text><![CDATA[番号]]></text>
-							</element>
-						</columnHeader>
-						<detailCell height="40" style="TD">
-							<element kind="textField" x="0" y="0" width="40" height="40" hTextAlign="Center" vTextAlign="Middle">
-								<expression><![CDATA[$F{num}]]></expression>
-							</element>
-						</detailCell>
-					</column>
-					
-					<column kind="single" width="400">
-						<columnHeader height="80" style="TH">
-							<element kind="staticText" x="0" y="0" width="400" height="40" hTextAlign="Center" vTextAlign="Middle">
-								<box topPadding="-4"/>
-								<text><![CDATA[名前1]]></text>
-							</element>
-							<element kind="line" x="0" y="40" width="400" height="0">
-								<pen lineWidth="1" lineColor="#c8ccd0"/>
-							</element>
-							<element kind="staticText" x="0" y="40" width="200" height="40" hTextAlign="Center" vTextAlign="Middle">
-								<box topPadding="-4"/>
-								<text><![CDATA[名前2]]></text>
-							</element>
-							<element kind="line" x="200" y="41" width="0" height="39">
-								<pen lineWidth="1" lineColor="#c8ccd0"/>
-							</element>
-							<element kind="staticText" x="200" y="40" width="200" height="40" hTextAlign="Center" vTextAlign="Middle">
-								<box topPadding="-4"/>
-								<text><![CDATA[名前3]]></text>
-							</element>
-						</columnHeader>
-						<detailCell height="40" style="TD">
-							<element kind="textField" x="0" y="0" width="400" height="40" printWhenDetailOverflows="true" textAdjust="StretchHeight"  hTextAlign="Left" vTextAlign="Middle">
-								<box topPadding="-4" leftPadding="4"/>
-								<printWhenExpression><![CDATA[$F{num} == 1]]></printWhenExpression>
-								<expression><![CDATA[$F{name}]]></expression>
-							</element>
-							
-							<element kind="textField" x="0" y="0" width="200" height="40" printWhenDetailOverflows="true" textAdjust="StretchHeight"  hTextAlign="Left" vTextAlign="Middle">
-								<box topPadding="-4" leftPadding="4"/>
-								<printWhenExpression><![CDATA[$F{num} == 2]]></printWhenExpression>
-								<expression><![CDATA[$F{name}]]></expression>
-							</element>
-							<element kind="line" x="200" y="0" width="0" height="40" printWhenDetailOverflows="true">
-								<pen lineWidth="1" lineColor="#c8ccd0"/>
-								<printWhenExpression><![CDATA[$F{num} == 2]]></printWhenExpression>
-							</element>
-							<element kind="textField" x="200" y="0" width="200" height="40" printWhenDetailOverflows="true" textAdjust="StretchHeight"  hTextAlign="Left" vTextAlign="Middle">
-								<box topPadding="-4" leftPadding="4"/>
-								<printWhenExpression><![CDATA[$F{num} == 2]]></printWhenExpression>
-								<expression><![CDATA[$F{name}]]></expression>
-							</element>
-							
-						</detailCell>
-					</column>
-					
-				</component>
+			<element kind="frame" x="0" y="42" width="555" height="640">
+				<element kind="component" x="0" y="0" width="555" height="640">
+					<component kind="table">
+						<datasetRun subDataset="rowsDataSet">
+							<dataSourceExpression><![CDATA[$P{rowsDataSet}]]></dataSourceExpression>
+						</datasetRun>
+						
+						<column kind="single" width="40">
+							<columnHeader height="80" style="TH">
+								<element kind="staticText" x="0" y="0" width="40" height="80" hTextAlign="Center" vTextAlign="Middle">
+									<text><![CDATA[番号]]></text>
+								</element>
+							</columnHeader>
+							<detailCell height="40" style="TD">
+								<element kind="textField" x="0" y="0" width="40" height="40" hTextAlign="Center" vTextAlign="Middle">
+									<expression><![CDATA[$F{num}]]></expression>
+								</element>
+							</detailCell>
+						</column>
+						
+						<column kind="single" width="515">
+							<columnHeader height="80" style="TH">
+								<element kind="staticText" x="0" y="0" width="400" height="40" hTextAlign="Center" vTextAlign="Middle">
+									<box topPadding="-4"/>
+									<text><![CDATA[名前1]]></text>
+								</element>
+								<element kind="line" x="0" y="40" width="515" height="0">
+									<pen lineWidth="1" lineColor="#c8ccd0"/>
+								</element>
+								<element kind="staticText" x="0" y="40" width="200" height="40" hTextAlign="Center" vTextAlign="Middle">
+									<box topPadding="-4"/>
+									<text><![CDATA[名前2]]></text>
+								</element>
+								<element kind="line" x="200" y="41" width="0" height="39">
+									<pen lineWidth="1" lineColor="#c8ccd0"/>
+								</element>
+								<element kind="staticText" x="200" y="40" width="315" height="40" hTextAlign="Center" vTextAlign="Middle">
+									<box topPadding="-4"/>
+									<text><![CDATA[名前3]]></text>
+								</element>
+							</columnHeader>
+							<detailCell height="40" style="TD">
+								<element kind="textField" x="0" y="0" width="515" height="40" printWhenDetailOverflows="true" textAdjust="StretchHeight"  hTextAlign="Left" vTextAlign="Middle">
+									<box topPadding="-4" leftPadding="4"/>
+									<printWhenExpression><![CDATA[$F{num} == 1]]></printWhenExpression>
+									<expression><![CDATA[$F{name}]]></expression>
+								</element>
+								
+								<element kind="textField" x="0" y="0" width="200" height="40" printWhenDetailOverflows="true" textAdjust="StretchHeight"  hTextAlign="Left" vTextAlign="Middle">
+									<box topPadding="-4" leftPadding="4"/>
+									<printWhenExpression><![CDATA[$F{num} == 2]]></printWhenExpression>
+									<expression><![CDATA[$F{name}]]></expression>
+								</element>
+								<element kind="line" x="200" y="0" width="0" height="40" printWhenDetailOverflows="true">
+									<pen lineWidth="1" lineColor="#c8ccd0"/>
+									<printWhenExpression><![CDATA[$F{num} == 2]]></printWhenExpression>
+								</element>
+								<element kind="textField" x="200" y="0" width="315" height="40" printWhenDetailOverflows="true" textAdjust="StretchHeight"  hTextAlign="Left" vTextAlign="Middle">
+									<box topPadding="-4" leftPadding="4"/>
+									<printWhenExpression><![CDATA[$F{num} == 2]]></printWhenExpression>
+									<expression><![CDATA[$F{name}]]></expression>
+								</element>
+								
+							</detailCell>
+						</column>
+						
+					</component>
+				</element>
 			</element>
 		</band>
 	</detail>
 	
+	<columnFooter height="20" splitType="Stretch">
+		<element kind="staticText" x="0" y="2" width="555" height="18" style="TD" hTextAlign="Center" vTextAlign="Middle">
+			<box topPadding="-4"/>
+			<text><![CDATA[column-footer]]></text>
+		</element>
+	</columnFooter>
+	
 	<pageFooter height="40" splitType="Stretch">
-		<element kind="textField" x="0" y="0" width="280" height="40">
-			<expression><![CDATA["FOOTER"]]></expression>
+		<element kind="textField" x="0" y="2" width="555" height="38" style="TD" hTextAlign="Center" vTextAlign="Middle">
+			<box topPadding="-4"/>
+			<expression><![CDATA["footer"]]></expression>
 		</element>
 	</pageFooter>
+	
+	<summary height="40" splitType="Stretch">
+		<element kind="textField" x="0" y="0" width="555" height="40" style="TH" hTextAlign="Center" vTextAlign="Middle">
+			<box topPadding="-4"/>
+			<expression><![CDATA["summary"]]></expression>
+		</element>
+	</summary>
 </jasperReport>

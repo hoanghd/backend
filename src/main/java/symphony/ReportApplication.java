@@ -48,7 +48,7 @@ public class ReportApplication {
 			rows.add(new Row("Louise Glass", 2));
 			
 			Map<String,Object> parameters = new HashMap<>();
-			parameters.put("companyName","HEADER");
+			parameters.put("companyName","header");
 			parameters.put("rowsDataSet", new JRBeanCollectionDataSource(rows));
 			
 			JasperReport report = JasperCompileManager.compileReport("/Users/hoang-hd/Documents/symphony/src/main/resources/templates/report.jrxml");
