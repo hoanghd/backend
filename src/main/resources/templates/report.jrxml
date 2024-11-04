@@ -7,8 +7,8 @@
 	<parameter name="companyName" class="java.lang.String"/>
 	<parameter name="rowsDataSet" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
 	
-	<pageHeader height="35" splitType="Stretch">
-		<element kind="textField" x="0" y="0" width="280" height="35">
+	<pageHeader height="40" splitType="Stretch">
+		<element kind="textField" x="0" y="0" width="280" height="40">
 			<expression><![CDATA[$P{companyName}]]></expression>
 		</element>
 	</pageHeader>
@@ -34,8 +34,13 @@
 	</style>
 	
 	<detail>
-		<band height="234" splitType="Stretch">
-			<element kind="component" x="0" y="0" width="351" height="234">
+		<band height="700" splitType="Stretch">
+			<element kind="staticText" x="0" y="0" width="440" height="40" style="TH" hTextAlign="Center" vTextAlign="Middle">
+				<box topPadding="-4"/>
+				<text><![CDATA[SUBHEADER]]></text>
+			</element>
+			
+			<element kind="component" x="0" y="50" width="351" height="640">
 				<component kind="table">
 					<datasetRun subDataset="rowsDataSet">
 						<dataSourceExpression><![CDATA[$P{rowsDataSet}]]></dataSourceExpression>
@@ -104,5 +109,10 @@
 			</element>
 		</band>
 	</detail>
-	<pageFooter height="54" splitType="Stretch"/>
+	
+	<pageFooter height="40" splitType="Stretch">
+		<element kind="textField" x="0" y="0" width="280" height="40">
+			<expression><![CDATA["FOOTER"]]></expression>
+		</element>
+	</pageFooter>
 </jasperReport>
