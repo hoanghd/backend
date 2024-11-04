@@ -14,8 +14,8 @@ public class ReportApplication {
 	public static void main(String[] args) {
 		try {
 			List<Row> rows = new ArrayList<>();
-			rows.add(new Row("ホアン", 1));
 			rows.add(new Row("JAIAが公表している統計資料ページです。JAIAが公表している統計資料ページです。JAIAが公表している統計資料ページです。JAIAが公表している統計資料ページです。", 1));
+			rows.add(new Row("Jacqueline Huff Jacqueline Huff", 2));
 			rows.add(new Row("Jacqueline Huff", 1));
 			rows.add(new Row("Louise Glass", 2));
 			rows.add(new Row("Jacqueline Huff", 1));

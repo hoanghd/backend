@@ -78,9 +78,25 @@
 						<detailCell height="40" style="TD">
 							<element kind="textField" x="0" y="0" width="400" height="40" printWhenDetailOverflows="true" textAdjust="StretchHeight"  hTextAlign="Left" vTextAlign="Middle">
 								<box topPadding="-4" leftPadding="4"/>
-								<printWhenExpression><![CDATA[$F{num} < 3]]></printWhenExpression>
+								<printWhenExpression><![CDATA[$F{num} == 1]]></printWhenExpression>
 								<expression><![CDATA[$F{name}]]></expression>
 							</element>
+							
+							<element kind="textField" x="0" y="0" width="200" height="40" printWhenDetailOverflows="true" textAdjust="StretchHeight"  hTextAlign="Left" vTextAlign="Middle">
+								<box topPadding="-4" leftPadding="4"/>
+								<printWhenExpression><![CDATA[$F{num} == 2]]></printWhenExpression>
+								<expression><![CDATA[$F{name}]]></expression>
+							</element>
+							<element kind="line" x="200" y="0" width="0" height="40" printWhenDetailOverflows="true">
+								<pen lineWidth="1" lineColor="#c8ccd0"/>
+								<printWhenExpression><![CDATA[$F{num} == 2]]></printWhenExpression>
+							</element>
+							<element kind="textField" x="200" y="0" width="200" height="40" printWhenDetailOverflows="true" textAdjust="StretchHeight"  hTextAlign="Left" vTextAlign="Middle">
+								<box topPadding="-4" leftPadding="4"/>
+								<printWhenExpression><![CDATA[$F{num} == 2]]></printWhenExpression>
+								<expression><![CDATA[$F{name}]]></expression>
+							</element>
+							
 						</detailCell>
 					</column>
 					
