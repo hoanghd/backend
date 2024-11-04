@@ -28,30 +28,22 @@
 	</style>
 	
 	<pageHeader height="40" splitType="Stretch">
-		<element kind="textField" x="0" y="0" width="555" height="38" style="TD" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="textField" x="0" y="0" width="555" height="38" style="TD" hTextAlign="Center" vTextAlign="Middle" backcolor="#faecc6">
 			<box topPadding="-4"/>
 			<expression><![CDATA[$P{companyName}]]></expression>
 		</element>
 	</pageHeader>
-	
-	<columnHeader height="20" splitType="Stretch">
-		<element kind="staticText" x="0" y="0" width="555" height="18" style="TD" hTextAlign="Center" vTextAlign="Middle">
-			<box topPadding="-4"/>
-			<text><![CDATA[column-header]]></text>
-		</element>
-	</columnHeader>
-	
+		
 	<detail>
-		<band height="682" splitType="Stretch">
-			<element kind="frame" x="0" y="0" width="555" height="40">
-				<element kind="staticText" x="0" y="0" width="555" height="40" style="TD" hTextAlign="Center" vTextAlign="Middle">
-					<box topPadding="-4"/>
-					<text><![CDATA[body-header]]></text>
-				</element>
+		<band height="40">
+			<element kind="staticText" x="0" y="0" width="555" height="38" style="TD" hTextAlign="Center" vTextAlign="Middle" backcolor="#a6d9b7">
+				<box topPadding="-4"/>
+				<text><![CDATA[body-header]]></text>
 			</element>
-			
-			<element kind="frame" x="0" y="42" width="555" height="640">
-				<element kind="component" x="0" y="0" width="555" height="640">
+		</band>
+		<band splitType="Stretch">
+			<element kind="frame" x="0" y="0" width="555">
+				<element kind="component" x="0" y="0" width="555">
 					<component kind="table">
 						<datasetRun subDataset="rowsDataSet">
 							<dataSourceExpression><![CDATA[$P{rowsDataSet}]]></dataSourceExpression>
@@ -100,46 +92,43 @@
 								
 								<element kind="textField" x="0" y="0" width="200" height="40" printWhenDetailOverflows="true" textAdjust="StretchHeight"  hTextAlign="Left" vTextAlign="Middle">
 									<box topPadding="-4" leftPadding="4"/>
-									<printWhenExpression><![CDATA[$F{num} == 2]]></printWhenExpression>
+									<printWhenExpression><![CDATA[$F{num} != 1]]></printWhenExpression>
 									<expression><![CDATA[$F{name}]]></expression>
 								</element>
 								<element kind="line" x="200" y="0" width="0" height="40" printWhenDetailOverflows="true">
 									<pen lineWidth="1" lineColor="#c8ccd0"/>
-									<printWhenExpression><![CDATA[$F{num} == 2]]></printWhenExpression>
+									<printWhenExpression><![CDATA[$F{num} != 1]]></printWhenExpression>
 								</element>
 								<element kind="textField" x="200" y="0" width="315" height="40" printWhenDetailOverflows="true" textAdjust="StretchHeight"  hTextAlign="Left" vTextAlign="Middle">
 									<box topPadding="-4" leftPadding="4"/>
-									<printWhenExpression><![CDATA[$F{num} == 2]]></printWhenExpression>
+									<printWhenExpression><![CDATA[$F{num} != 1]]></printWhenExpression>
 									<expression><![CDATA[$F{name}]]></expression>
 								</element>
-								
 							</detailCell>
 						</column>
-						
 					</component>
 				</element>
 			</element>
 		</band>
+		<band height="40">
+			<element kind="staticText" x="0" y="2" width="555" height="38" style="TD" hTextAlign="Center" vTextAlign="Middle" backcolor="#a6d9b7">
+				<box topPadding="-4"/>
+				<text><![CDATA[body-footer]]></text>
+			</element>
+		</band>
 	</detail>
 	
-	<columnFooter height="20" splitType="Stretch">
-		<element kind="staticText" x="0" y="2" width="555" height="18" style="TD" hTextAlign="Center" vTextAlign="Middle">
-			<box topPadding="-4"/>
-			<text><![CDATA[column-footer]]></text>
-		</element>
-	</columnFooter>
-	
-	<pageFooter height="40" splitType="Stretch">
-		<element kind="textField" x="0" y="2" width="555" height="38" style="TD" hTextAlign="Center" vTextAlign="Middle">
-			<box topPadding="-4"/>
-			<expression><![CDATA["footer"]]></expression>
-		</element>
-	</pageFooter>
-	
 	<summary height="40" splitType="Stretch">
-		<element kind="textField" x="0" y="0" width="555" height="40" style="TH" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="textField" x="0" y="2" width="555" height="38" style="TD" hTextAlign="Center" vTextAlign="Middle" backcolor="#e7700d">
 			<box topPadding="-4"/>
 			<expression><![CDATA["summary"]]></expression>
 		</element>
 	</summary>
+	
+	<pageFooter height="40" splitType="Stretch">
+		<element kind="textField" x="0" y="2" width="555" height="38" style="TD" hTextAlign="Center" vTextAlign="Middle" backcolor="#f1f2f3">
+			<box topPadding="-4"/>
+			<expression><![CDATA["footer"]]></expression>
+		</element>
+	</pageFooter>
 </jasperReport>
