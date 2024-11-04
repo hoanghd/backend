@@ -14,7 +14,7 @@
 	</pageHeader>
 					
 	<style name="TH" mode="Opaque" backcolor="#F0F8FF">
-		<box>
+		<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
 			<pen lineWidth="0.5" lineColor="#000000"/>
 			<topPen lineWidth="0.5" lineColor="#000000"/>
 			<leftPen lineWidth="0.5" lineColor="#000000"/>
@@ -24,7 +24,7 @@
 	</style>
 	
 	<style name="TD" mode="Opaque">
-		<box>
+		<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
 			<pen lineWidth="0.5" lineColor="#000000"/>
 			<topPen lineWidth="0.5" lineColor="#000000"/>
 			<leftPen lineWidth="0.5" lineColor="#000000"/>
@@ -42,45 +42,43 @@
 					</datasetRun>
 					
 					<column kind="single" width="40">
-						<columnHeader height="60" style="TH">
-							<element kind="staticText" x="4" y="2" width="34" height="56" hTextAlign="Center" vTextAlign="Middle">
+						<columnHeader height="80" style="TH">
+							<element kind="staticText" x="0" y="0" width="40" height="80" hTextAlign="Center" vTextAlign="Middle">
 								<text><![CDATA[番号]]></text>
 							</element>
 						</columnHeader>
-						
-						<detailCell height="30" style="TD">
-							<element kind="textField" x="4" y="2" width="34" height="26" hTextAlign="Center" vTextAlign="Middle">
+						<detailCell height="40" style="TD">
+							<element kind="textField" x="0" y="0" width="40" height="40" hTextAlign="Center" vTextAlign="Middle">
 								<expression><![CDATA[$F{num}]]></expression>
 							</element>
 						</detailCell>
 					</column>
 					
 					<column kind="single" width="400">
-						<columnHeader height="60" style="TH">
-							<element kind="staticText" x="4" y="0" width="394" height="30" hTextAlign="Center" vTextAlign="Middle">
+						<columnHeader height="80" style="TH">
+							<element kind="staticText" x="0" y="0" width="400" height="40" hTextAlign="Center" vTextAlign="Middle">
+								<box topPadding="-4"/>
 								<text><![CDATA[名前1]]></text>
 							</element>
-							
-							<element kind="line" x="0" y="30" width="400" height="0">
+							<element kind="line" x="0" y="40" width="400" height="0">
 								<pen lineWidth="0.5"/>
 							</element>
-							
-							<element kind="staticText" x="4" y="30" width="194" height="30" hTextAlign="Center" vTextAlign="Middle">
+							<element kind="staticText" x="0" y="40" width="200" height="40" hTextAlign="Center" vTextAlign="Middle">
+								<box topPadding="-4"/>
 								<text><![CDATA[名前2]]></text>
 							</element>
-							
-							<element kind="line" x="200" y="31" width="0" height="29">
+							<element kind="line" x="200" y="40" width="0" height="40">
 								<pen lineWidth="0.5"/>
 							</element>
-							
-							<element kind="staticText" x="204" y="30" width="194" height="30" hTextAlign="Center" vTextAlign="Middle">
+							<element kind="staticText" x="200" y="40" width="200" height="40" hTextAlign="Center" vTextAlign="Middle">
+								<box topPadding="-4"/>
 								<text><![CDATA[名前3]]></text>
 							</element>
-							
 						</columnHeader>
-						
-						<detailCell height="30" style="TD">
-							<element kind="textField" x="4" y="2" width="394" height="26" hTextAlign="Left" vTextAlign="Middle" textAdjust="StretchHeight">
+						<detailCell height="40" style="TD">
+							<element kind="textField" x="0" y="0" width="400" height="40" printWhenDetailOverflows="true" textAdjust="StretchHeight"  hTextAlign="Left" vTextAlign="Middle">
+								<box topPadding="-4" leftPadding="4"/>
+								<printWhenExpression><![CDATA[$F{num} < 3]]></printWhenExpression>
 								<expression><![CDATA[$F{name}]]></expression>
 							</element>
 						</detailCell>
